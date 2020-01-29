@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  Desafio 1: Conceitos do NodeJS
+  Desafios GoStack
 </h3>
 
 <blockquote align="center">“Sua única limitação é você mesmo”!</blockquote>
