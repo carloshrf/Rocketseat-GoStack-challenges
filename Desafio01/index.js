@@ -20,17 +20,17 @@ function checkProjectExists(req, res, next){
 }
 
 // Return the number of requests to the API
-function registerRequest(req, res, next) {
+server.use((req, res, next) => {
   console.log('Requests: '+ ++request);
   return next();
-}
+})
 
 //================================
 // </MIDDLEWARES>
 //================================
 
 // Creates a project
-server.post('/projects', registerRequest, (req, res) => {
+server.post('/projects', (req, res) => {
   const data = {
     id: req.body.id,
     title: req.body.title,
@@ -42,26 +42,26 @@ server.post('/projects', registerRequest, (req, res) => {
 })
 
 // Lists all projects
-server.get('/projects', registerRequest, (req, res) => {
+server.get('/projects', (req, res) => {
   return res.json(projects);
 })
 
 // Change any project
-server.put('/projects/:id', registerRequest, checkProjectExists, (req, res) => {
+server.put('/projects/:id', checkProjectExists, (req, res) => {
   const project = projects.find(project => project.id == req.params.id);
   project.title = req.body.title;
   return res.json(project);
 })
 
 // Delete project
-server.delete('/projects/:id', registerRequest, checkProjectExists, (req, res) => {
+server.delete('/projects/:id', checkProjectExists, (req, res) => {
   const projectIndex = projects.findIndex(project => project.id == req.params.id);
   projects.splice(projectIndex, 1);
   return res.send('Projeto removido');
 })
 
 // Add tasks to projects
-server.post('/projects/:id/tasks', registerRequest, checkProjectExists, (req, res) => {
+server.post('/projects/:id/tasks', checkProjectExists, (req, res) => {
   const project = projects.find(project => project.id == req.params.id);
   project.tasks.push(req.body.title);
   return res.send('Tasks added!');
