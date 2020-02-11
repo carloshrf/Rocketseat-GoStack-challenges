@@ -1,8 +1,12 @@
-const { resolve } = require('path');
-
 module.exports = {
-  config: resolve(__dirname, 'src', 'config', 'database.js'),
-  'models-path': resolve(__dirname, 'src', 'app', 'models'),
-  'migrations-path': resolve(__dirname, 'src', 'database', 'migrations'),
-  'seeders-path': resolve(__dirname, 'src', 'database', 'seeds')
+  dialect: 'postgres',
+  host: '192.168.99.100',
+  username: 'postgres',
+  password: 'docker',
+  database: 'fastfeet',
+  define: {
+    timestamps: true,
+    underscored: true,
+    underscoredAll: true,
+  },
 };
