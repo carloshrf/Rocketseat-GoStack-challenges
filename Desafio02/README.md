@@ -36,7 +36,7 @@
 
 <hr />
 <p align="center">
-  <strong><a href="https://github.com/carloshrf/FastFeet/tree/1819084b7d9135d8fc25f83bfd3c566bb5c7e38b/src">Acesse o desafio 2 completo</a></strong>
+  <strong><a href="https://github.com/carloshrf/FastFeet/tree/1819084b7d9135d8fc25f83bfd3c566bb5c7e38b">Acesse o desafio 2 completo</a></strong>
 </p>
 <hr />
 
