@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 
 import './styles.css';
-import profImg1 from '../../assets/profiles/diego.png';
-import profImg2 from '../../assets/profiles/lacerda.png';
+
 import Comment from '../Comment';
 
-class Body extends Component {
+class Post extends Component {
 
   render() {
 
@@ -23,11 +22,19 @@ class Body extends Component {
           </div>
         </div>
         <p className="message">{this.props.content}</p>
-        <Comment key={this.props.commentId}/>
+        {this.props.comments.map(comment => (
+          <Comment 
+            key={comment.id} 
+            avatar={comment.author.avatar} 
+            content={comment.content}
+            author={comment.author.name}
+          />
+        ))}
+        
       </div>
     );
   }
 
 }
 
-export default Body;
+export default Post;
