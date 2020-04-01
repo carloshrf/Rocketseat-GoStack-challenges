@@ -1,5 +1,4 @@
 <h1>Results</h1>
-<hr />
 
 <h1 align="center">
     <img alt="GoStack" src="https://raw.githubusercontent.com/carloshrf/Rocketseat-GoStack-challenges/master/Desafio04/previews/preview1.png" width="600px" />
