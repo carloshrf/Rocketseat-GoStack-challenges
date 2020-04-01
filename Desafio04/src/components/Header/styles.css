@@ -1,0 +1,29 @@
+.topbar {
+  height: 60px;
+  background: #3B5998;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profileImg, .logoImg {
+  height: 30px;
+}
+
+.profileImg {
+  padding-left: 10px;
+}
+
+.profileLink {
+  margin: 10px 60px 0 0;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logoLink {
+  margin: 15px 0 0 60px;
+}
